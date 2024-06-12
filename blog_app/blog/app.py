@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, render_template, url_for, redirect
 
 from blog.commands import CreateArticleCommand
 from blog.queries import GetArticleByIDQuery, ListArticlesQuery
@@ -36,6 +36,10 @@ def list_articles():
     query = ListArticlesQuery()
     records = [record.dict() for record in query.execute()]
     return jsonify(records)
+
+@app.route("/", methods=["GET"])
+def index():
+    return render_template("index.html")
 
 
 if __name__ == "__main__":
