@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>All Articles</h1>
+
+{% for article in  articles %}
+    <h2>{{ article.title }}</h2>
+    <p>{{ article.author }}</p>
+    <a href="{{ url_for('get_article', article_id = article.id) }}">Read more</a>
+    <hr>
+{% endfor %}
+
+{% endblock %}
