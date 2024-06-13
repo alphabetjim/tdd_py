@@ -13,6 +13,18 @@
 	<title>Blog App</title>
 </head>
 <body>
+	<div class="container">
+		<div class="button_div">
+			<a class="link-article-list" href="{{ url_for('index') }}">
+				Home
+			</a>
+		</div>
+		<div class="button_div">
+			<a class="link-article-list" href="{{ url_for('list_articles') }}">
+				Article List
+			</a>
+		</div>
+	</div>
 	{% block content %}
 
 	{% endblock %}

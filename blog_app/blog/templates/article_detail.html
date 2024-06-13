@@ -1,14 +1,15 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div class="center_div text-center mt-auto d-flex flex-column">
+    <div class="article_div">
+        <h1>{{ article.title }}</h1>
+        <p>{{ article.author }}</p>
+        <hr>
+        <p>{{ article.content }}</p>
+    </div>
 
-<h1>All Articles</h1>
-
-<h2>{{ article.title }}</h2>
-<p>{{ article.author }}</p>
-<hr>
-<p>{{ article.content }}</p>
-
-<a href="{{ url_for('list_articles') }}">Back to Article List</a>
+    <a href="{{ url_for('list_articles') }}">Back to Article List</a>
+</div>
 
 {% endblock %}

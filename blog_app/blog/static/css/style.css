@@ -1,3 +1,14 @@
-html {
-    
+.article_div {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: fit-content;
+
+    align-self: center;
+}
+
+.center_div {
+    margin: 0 auto;
+    width: 50%;
 }

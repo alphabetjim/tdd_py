@@ -1,13 +1,20 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div class="center_div text-center mt-auto d-flex flex-column">
+    <h1>Welcome to the Blog App Site!</h1>
 
-<h1>Welcome to the Blog App Site!</h1>
+    <div class="text-center button_div">
+        <a class="link-article-list" href="article-list/">
+            View all articles
+        </a>
+    </div>
 
-<div class="text-center followbuttondiv">
-    <a class="link-article-list" href="article-list/">
-        View all articles
-    </a>
+    <div class="text-center button_div">
+        <a class="link-article-list" href="{{ url_for('create_article_form') }}">
+            Create Article
+        </a>
+    </div>
 </div>
 
 {% endblock %}

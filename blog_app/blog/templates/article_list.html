@@ -1,14 +1,18 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div class="center_div text-center mt-auto d-flex flex-column">
+    
+    <h1>All Articles</h1>
 
-<h1>All Articles</h1>
+    {% for article in  articles %}
+    <div class="article_div text-center">
+        <h2>{{ article.title }}</h2>
+        <p>{{ article.author }}</p>
+        <a href="{{ url_for('get_article', article_id = article.id) }}">Read more</a>
+    </div>    
+    {% endfor %}
 
-{% for article in  articles %}
-    <h2>{{ article.title }}</h2>
-    <p>{{ article.author }}</p>
-    <a href="{{ url_for('get_article', article_id = article.id) }}">Read more</a>
-    <hr>
-{% endfor %}
+</div>
 
 {% endblock %}
